@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2f74b5" />
+  <title>Get NurseTrack — beta access</title>
+  <meta name="description" content="Install the NurseTrack beta — limited spots for home-health nurses. iPhone via TestFlight, Android direct install." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" href="assets/app-icon-preview.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Page-scoped layout: a centered chooser card. Phones normally never
+       see this page (vercel.json user-agent redirects send them straight
+       to TestFlight / the APK); this is the desktop + unknown-device
+       fallback, so it stays deliberately minimal. */
+    .gt-wrap {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px;
+    }
+    .gt-card {
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+    .gt-card h1 { margin-bottom: 12px; }
+    .gt-sub { opacity: 0.8; margin-bottom: 28px; line-height: 1.5; }
+    .gt-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 320px;
+      margin: 0 auto 24px;
+    }
+    .gt-note { font-size: 0.85rem; opacity: 0.65; line-height: 1.5; }
+    .gt-note a { color: inherit; }
+  </style>
+</head>
+<body id="top">
+  <header class="mk-nav">
+    <div class="mk-wrap mk-navrow">
+      <a class="mk-wordmark" href="/" aria-label="NurseTrack — home">
+        <picture>
+          <source srcset="assets/wordmark-banner-dark.png" media="(prefers-color-scheme: dark)" />
+          <img src="assets/wordmark-banner.png" alt="NurseTrack" width="1600" height="520" />
+        </picture>
+      </a>
+    </div>
+  </header>
+
+  <main class="gt-wrap">
+    <div class="gt-card">
+      <h1>Get the NurseTrack beta</h1>
+      <p class="gt-sub">
+        Now in beta — limited spots for home-health nurses.
+        Pick your phone below, install, and sign up with the email
+        you want your founding-member perks tied to.
+      </p>
+      <div class="gt-buttons">
+        <a class="mk-btn primary" href="/ios">iPhone — install via TestFlight</a>
+        <a class="mk-btn ghost" href="/android">Android — direct install</a>
+      </div>
+      <p class="gt-note">
+        iPhone installs use Apple's free TestFlight app.
+        Questions or beta full? Email
+        <a href="mailto:hello@nursetrack.app">hello@nursetrack.app</a>
+        and we'll save you a spot for launch.
+      </p>
+    </div>
+  </main>
+</body>
+</html>
