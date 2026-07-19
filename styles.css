@@ -622,3 +622,45 @@ footer {
   .mk-btn { transition: none; }
   .mk-btn.primary:hover { transform: none; }
 }
+
+/* ---------- founding-member offers (pricing section) ---------- */
+/* Sits above the price card; uses the warning palette for the badge so
+   the scarcity line reads as a highlight, not an error. Numbers in the
+   HTML must stay in sync with App Store Connect / RevenueCat. */
+.mk-founding {
+  max-width: 640px; margin: 32px auto 8px; text-align: center;
+}
+.mk-founding-badge {
+  display: inline-block; padding: 6px 14px; border-radius: 999px;
+  background: var(--nt-warning-bg); color: var(--nt-warning);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 18px;
+}
+.mk-founding-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; text-align: left;
+}
+@media (max-width: 560px) {
+  .mk-founding-grid { grid-template-columns: 1fr; }
+}
+.mk-founding-deal {
+  background: var(--nt-surface); border: 1px solid var(--nt-border);
+  border-radius: 14px; padding: 18px 20px; box-shadow: var(--mk-shadow-sm);
+}
+.mk-founding-deal .fd-price {
+  font-size: 28px; font-weight: 800; color: var(--nt-accent-text);
+}
+.mk-founding-deal .fd-price span {
+  font-size: 14px; font-weight: 600; color: var(--nt-text-tertiary);
+}
+.mk-founding-deal .fd-label {
+  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--nt-text-secondary); margin: 2px 0 8px; font-weight: 700;
+}
+.mk-founding-deal p {
+  font-size: 14px; line-height: 1.55; color: var(--nt-text-secondary); margin: 0;
+}
+.mk-founding-note {
+  /* Sits on the blue band, not a card — use band ink, not page grays. */
+  margin-top: 14px; font-size: 13px; color: var(--mk-band-sub);
+}
+.mk-founding-note a { color: var(--mk-band-ink); font-weight: 600; }
