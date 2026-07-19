@@ -37,6 +37,16 @@
     }
     .gt-note { font-size: 0.85rem; opacity: 0.65; line-height: 1.5; }
     .gt-note a { color: inherit; }
+    .gt-qrs {
+      display: flex; gap: 24px; justify-content: center;
+      flex-wrap: wrap; margin: 8px 0 24px;
+    }
+    .gt-qr {
+      background: #fff; border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 14px; padding: 14px 14px 10px; text-align: center;
+    }
+    .gt-qr img { width: 160px; height: 160px; display: block; }
+    .gt-qr .lbl { font-size: 0.8rem; font-weight: 700; color: #153e6f; margin-top: 6px; }
   </style>
 </head>
 <body id="top">
@@ -62,6 +72,20 @@
       <div class="gt-buttons">
         <a class="mk-btn primary" href="/ios">iPhone — install via TestFlight</a>
         <a class="mk-btn ghost" href="/android">Android — direct install</a>
+      </div>
+      <!-- Desktop path: this page only renders on non-phones (phones
+           auto-redirect via vercel.json), so show scannable codes —
+           "reading this on a laptop, phone in hand" is the main case. -->
+      <p class="gt-sub" style="margin-bottom:16px">Or scan with your phone's camera:</p>
+      <div class="gt-qrs">
+        <div class="gt-qr">
+          <img src="assets/qr-ios.png" alt="QR code — install on iPhone" width="160" height="160" />
+          <div class="lbl">iPhone</div>
+        </div>
+        <div class="gt-qr">
+          <img src="assets/qr-android.png" alt="QR code — install on Android" width="160" height="160" />
+          <div class="lbl">Android</div>
+        </div>
       </div>
       <p class="gt-note">
         iPhone installs use Apple's free TestFlight app.
