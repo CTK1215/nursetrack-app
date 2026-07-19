@@ -1,3 +1,27 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/get",
+      "has": [{ "type": "header", "key": "user-agent", "value": ".*Android.*" }],
+      "destination": "/android",
+      "permanent": false
+    },
+    {
+      "source": "/get",
+      "has": [{ "type": "header", "key": "user-agent", "value": ".*(iPhone|iPad|iPod).*" }],
+      "destination": "/ios",
+      "permanent": false
+    },
+    {
+      "source": "/ios",
+      "destination": "https://testflight.apple.com/join/bP9MdPwu",
+      "permanent": false
+    },
+    {
+      "source": "/android",
+      "destination": "https://expo.dev/accounts/ctkelly1277/projects/nursetrack/builds/efa176d7-0498-4091-8670-ccf59a8f2d7a",
+      "permanent": false
+    }
+  ]
 }
